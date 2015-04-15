@@ -1,0 +1,12 @@
+{% extends 'STSAnnuaireBundle::layout.html.twig' %}
+{% form_theme form 'STSAnnuaireBundle:Default:form.html.twig' %}
+
+{% set title = 'Nouveau contact' %}
+{% block content -%}
+
+    {{ form(form) }}
+
+    <div class="record_actions">
+        <button onclick="window.location.href='{{ path('annuaire') }}';" class="btn btn-primary">Retour à la liste</button>
+    </div>
+{% endblock %}

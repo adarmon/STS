@@ -1,0 +1,45 @@
+{% extends 'STSAnnuaireBundle::layout.html.twig' %}
+
+{% set title = 'Détail d’un contact : '~entity.prenom~' '~entity.nom  %}
+
+{% block description %}{{ entity.prenom }} {{ entity.nom }}{% endblock %}
+
+{% block content -%}
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ entity.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone fixe</th>
+                <td>{{ entity.telFixe }}</td>
+            </tr>
+            <tr>
+                <th>Téléphone mobile</th>
+                <td>{{ entity.telMobile }}</td>
+            </tr>
+            <tr>
+                <th>Département</th>
+                <td>{{ entity.departement }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="record_actions">
+        <button onclick="window.location.href = '{{ path('annuaire') }}';" class="btn btn-primary"> Retour à la liste </button>
+
+        <button onclick="window.location.href = '{{ path('annuaire_edit', { 'id': entity.id }) }}';" class="btn btn-primary"> Modifier </button>
+        <div style="float:right;margin-left:10px">{{ form(delete_form) }}</div>
+    </div>
+</ul>
+{% endblock %}

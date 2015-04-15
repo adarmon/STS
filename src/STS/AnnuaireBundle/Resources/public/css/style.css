@@ -1,0 +1,333 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+#basdepage {
+    width:100%;
+    text-align: center;
+    margin:0 auto;
+    background: #F8C858;
+    display : table-row;
+    height: 10px;
+}
+p.home {
+    margin: 10px;
+    font-family: sans-serif;
+    border-radius: 25px;
+    border: 2px solid red;
+    padding: 10px;
+}
+img.homeimg {
+    float: left;
+}
+
+/* form */
+label, input {
+    display: inline-block;
+    margin:2px;
+}
+label {
+    width: 30%;
+    text-align: right;
+    vertical-align: top;
+}
+label.inner {
+    width:5%;
+}
+div.submit {
+    width: 150px;
+    margin: 5px auto;
+}
+input:required{
+    background: #fff;
+    box-shadow: none;
+    border:none;
+}
+input:invalid {
+    background: #fff url(../img/Error.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+input:valid {
+    background: #fff url(../img/Apply.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+/********************/
+div#core {
+    width: 80%;
+    position: relative;
+    margin: 20px auto;
+    border:1px dotted #fff;
+    clear:left;
+    border-color:#aaaaaa;    
+    padding: 20px 20px;-moz-box-shadow: 10px 10px 15px 0px #bbbbbb;
+    -webkit-box-shadow: 10px 10px 15px 0px #bbbbbb;
+    -o-box-shadow: 10px 10px 15px 0px #bbbbbb;
+    box-shadow: 10px 10px 15px 0px #bbbbbb;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#bbbbbb, Direction=134, Strength=15);
+    -webkit-border-top-left-radius: 12px;
+    border-top-left-radius:12px;
+    -moz-border-radius-topleft: 12px;
+}
+
+
+.records_list {
+    margin:5px auto;
+    padding: 5px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+.records_list th {
+    background-color:#F9E702;
+}
+.records_list td, .records_list th {
+    border:1px dotted #333;
+    margin: 0px 0px;
+    padding: 5px;
+}
+
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+label,
+input,
+button,
+select,
+textarea {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    display: inline-block;
+    height: 20px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+input,
+textarea,
+.uneditable-input {
+    width: 206px;
+}
+
+textarea {
+    height: auto;
+}
+
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    *margin-top: 0;
+    line-height: normal;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+select,
+input[type="file"] {
+    height: 30px;
+    /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+    *margin-top: 4px;
+    /* For IE7, add top margin to align select with labels */
+
+    line-height: 30px;
+}
+
+select {
+    width: 220px;
+}
+
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    outline: thin dotted;
+}
+
+.uneditable-input,
+.uneditable-textarea {
+    cursor: not-allowed;
+}
+
+.uneditable-input {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.uneditable-textarea {
+    width: auto;
+    height: auto;
+}
+
+.radio,
+.checkbox {
+    min-height: 20px;
+    padding-left: 20px;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: -20px;
+}
+
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+    padding-top: 5px;
+}
+
+.radio.inline,
+.checkbox.inline {
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+    margin-left: 10px;
+}
+
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+legend + .control-group {
+    margin-top: 20px;
+    -webkit-margin-top-collapse: separate;
+}
+
+.form-horizontal .control-group {
+    margin-bottom: 20px;
+    *zoom: 1;
+}
+
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.form-horizontal .control-group:after {
+    clear: both;
+}
+
+.form-horizontal .control-label {
+    float: left;
+    width: 160px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.form-horizontal .controls {
+    *display: inline-block;
+    *padding-left: 20px;
+    margin-left: 180px;
+    *margin-left: 0;
+}
+
+.form-horizontal .controls:first-child {
+    *padding-left: 180px;
+}
+
+.form-horizontal .help-block {
+    margin-bottom: 0;
+}
+
+.form-horizontal input + .help-block,
+.form-horizontal select + .help-block,
+.form-horizontal textarea + .help-block,
+.form-horizontal .uneditable-input + .help-block,
+.form-horizontal .input-prepend + .help-block,
+.form-horizontal .input-append + .help-block {
+    margin-top: 10px;
+}
+
+.form-horizontal .form-actions {
+    padding-left: 180px;
+}

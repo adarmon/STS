@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{% if title is defined and title is not null %}{{ title }}{% endif %}{% endblock %}
+{% block body %}
+
+    {% block fos_user_content %}
+        <div class="headbar">
+            <img src="{{ asset('images/logo.png') }}" alt="STS" class="logo" width="150" />
+            <h1>{{ title }}</h1>
+        </div>
+        <div id="core">
+            {% block content %}
+            {% endblock %}
+        </div>
+    {% endblock fos_user_content %}
+{% endblock %}

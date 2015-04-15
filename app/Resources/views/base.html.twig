@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <meta description="{% block description %}{% endblock %}" />
+
+        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}" />
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon.ico') }}" />
+
+        <link rel=stylesheet type="text/css" href="{{ asset('css/style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
+    </head>
+    <body>
+        <div id="wrap">
+            {% block body %}
+            {% endblock %}
+
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            {#<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>#}
+            {% block javalinks %}
+            {% endblock %}
+            {% block javascripts %}
+            {% endblock %}   
+        </div>
+        <div id="footer">
+            {% include ':blocks:footer.html.twig' %}
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,13 @@
+{% extends 'STSAnnuaireBundle::layout.html.twig' %}
+{% form_theme edit_form 'STSAnnuaireBundle:Default:form.html.twig' %}
+
+{% set title = 'Edition de l’annuaire' %}
+
+{% block content -%}
+
+    {{ form(edit_form) }}
+
+    <div class="record_actions">
+        <button onclick="window.location.href='{{ path('annuaire') }}';" class="btn btn-primary">Retour à la liste</button> &nbsp;&nbsp; <div style="float:right;margin-left:10px">{{ form(delete_form) }}</div>
+    </div>
+{% endblock %}
