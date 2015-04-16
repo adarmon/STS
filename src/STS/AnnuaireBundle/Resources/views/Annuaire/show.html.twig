@@ -6,6 +6,13 @@
 
 {% block content -%}
 
+    {# format phone numbers #}
+    {% set splitArray = entity.telFixe|split('', 2) %}
+    {% set formattedPhone = splitArray|join(' ') %}
+
+    {% set splitArray = entity.telMobile|split('', 2) %}
+    {% set formattedMobile = splitArray|join(' ') %}
+
     <table class="record_properties">
         <tbody>
             <tr>
@@ -22,11 +29,11 @@
             </tr>
             <tr>
                 <th>Téléphone fixe</th>
-                <td>{{ entity.telFixe }}</td>
+                <td>{{ formattedPhone }}</td>
             </tr>
             <tr>
                 <th>Téléphone mobile</th>
-                <td>{{ entity.telMobile }}</td>
+                <td>{{ formattedMobile }}</td>
             </tr>
             <tr>
                 <th>Département</th>

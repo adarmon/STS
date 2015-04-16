@@ -2,6 +2,7 @@
 
 {% set title = 'Annuaire' %}
 
+
 {% block description %}Annuaire{% endblock %}
 
 {% block content -%}
@@ -20,13 +21,21 @@
 
         <tbody>
             {% for entity in entities %}
+
+                {# format phone numbers #}
+                {% set splitArray = entity.telFixe|split('', 2) %}
+                {% set formattedPhone = splitArray|join(' ') %}
+
+                {% set splitArray = entity.telMobile|split('', 2) %}
+                {% set formattedMobile = splitArray|join(' ') %}
+
                 <tr>
                     <td><a href="{{ path('annuaire_show', { 'id': entity.id }) }}"><img src={{ asset('images/Zoom.png') }} size="10" /></a></td>
                     <td><a href="{{ path('annuaire_edit', { 'id': entity.id }) }}"><img src={{ asset('images/Modify.png') }} size="10" /></a></td>
                     <td>{{ entity.nom }}</td>
                     <td>{{ entity.prenom }}</td>
-                    <td>{{ entity.telFixe }}</td>
-                    <td>{{ entity.telMobile }}</td>
+                    <td class="text-center">{{ formattedPhone }}</td>
+                    <td class="text-center">{{ formattedMobile }}</td>
                     <td class="text-center">{{ entity.departement }}</td>
                 </tr>
             {% endfor %}
